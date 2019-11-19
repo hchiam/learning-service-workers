@@ -8,3 +8,5 @@ Tutorial to follow: <https://web.dev/codelab-service-workers>
 npm install
 npm run start
 ```
+
+Then open <http://localhost:8000> in Chrome and open Chrome DevTools.
