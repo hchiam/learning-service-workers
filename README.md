@@ -10,3 +10,5 @@ npm run start
 ```
 
 Then open <http://localhost:8000> in Chrome and open Chrome DevTools.
+
+Application -> Service Workers
