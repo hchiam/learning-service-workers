@@ -23,4 +23,6 @@ Application -> Service Workers
 
 ## Another example
 
-<https://glitch.com/~serviceworker-offline>
+3-step code snippets: <https://github.com/hchiam/learning-service-workers/tree/master/another-example>
+
+(After learning from: <https://glitch.com/~serviceworker-offline>)
