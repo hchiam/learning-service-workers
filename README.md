@@ -2,18 +2,18 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-Tutorial to follow: <https://web.dev/codelab-service-workers>
+## Setup
 
 ```bash
 npm install
 npm run start
 ```
 
-Then open <http://localhost:8000> in Chrome and open Chrome DevTools.
+Then open <http://localhost:8000> in Chrome and open Chrome DevTools: Application -> Service Workers.
 
-Application -> Service Workers
+For more info, follow this tutorial: <https://web.dev/codelab-service-workers>
 
-## Looking at the code?
+## Looking at the code in this repo?
 
 (The most important stuff is inside the `public` folder.)
 
@@ -21,8 +21,8 @@ Application -> Service Workers
 2. [`register-sw.js`](https://github.com/hchiam/learning-service-workers/blob/master/public/register-sw.js) registers the service worker `service-worker.js`, and
 3. [`service-worker.js`](https://github.com/hchiam/learning-service-workers/blob/master/public/service-worker.js) is the actual service worker, and listens/reacts to specific events.
 
-## Another example
+## Example template code that actually does something
 
-3-step code snippets: <https://github.com/hchiam/learning-service-workers/tree/master/another-example>
+3-steps: <https://github.com/hchiam/learning-service-workers/tree/master/another-example>
 
-(After learning from: <https://glitch.com/~serviceworker-offline>)
+(Based on what I learned from this template: <https://glitch.com/~serviceworker-offline>)
