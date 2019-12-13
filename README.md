@@ -32,3 +32,7 @@ For more info, follow this tutorial: <https://web.dev/codelab-service-workers>
 The following service worker script makes 2 kinds of things available offline (an offline page, and various JS/CSS resources needed to make it interactive offline):
 
 <https://github.com/hchiam/hchiam.github.io/blob/1c18a08e69a905c0ede2d650e1bea2cdd4a56d8b/service-worker.js>
+
+And you can see the latest version of that same service worker file here: (it does more)
+
+<https://github.com/hchiam/hchiam.github.io/blob/master/service-worker.js>
