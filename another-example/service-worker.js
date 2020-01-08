@@ -5,6 +5,7 @@ var URLS = [
   'offline-page.html',
   'script.js',
   'style.css',
+  'manifest.webmanifest'
 ];
 
 self.addEventListener('install', function (e) {

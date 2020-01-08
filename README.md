@@ -25,7 +25,7 @@ For more info, follow this tutorial: <https://web.dev/codelab-service-workers>
 
 3-steps: <https://github.com/hchiam/learning-service-workers/tree/master/another-example>
 
-(Based on what I learned from this template: <https://glitch.com/~serviceworker-offline>)
+(Based on what I learned from this template: <https://glitch.com/~serviceworker-offline> and more.)
 
 ## Example that's actually used
 
