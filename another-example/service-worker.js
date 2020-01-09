@@ -1,11 +1,11 @@
 var CACHE_NAME = 'version_01';
 
 var URLS = [
-  'index.html',
-  'offline-page.html',
-  'script.js',
-  'style.css',
-  'manifest.webmanifest'
+  '/index.html',
+  '/offline-page.html',
+  '/script.js',
+  '/style.css',
+  '/manifest.webmanifest'
 ];
 
 self.addEventListener('install', function (e) {
