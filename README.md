@@ -36,3 +36,58 @@ The following service worker script makes 2 kinds of things available offline (a
 And you can see the latest version of that same service worker file here: (it does more)
 
 <https://github.com/hchiam/hchiam.github.io/blob/master/service-worker.js>
+
+## Background Sync API
+
+```js
+// in client:
+registerServiceWorker();
+requestAOneOffSync();
+
+function registerServiceWorker() {
+  navigator.serviceWorker.register('/sw.js');
+}
+
+function requestAOneOffSync() {
+  if ('serviceWorker' in navigator && 'SyncManager' in window) {
+    navigator.serviceWorker.ready.then(function(swRegistration) {
+      return swRegistration.sync.register('myFirstSync');
+    }).catch(function() {
+      // maybe OS-level restriction on registering a sync, so just do it
+      postDataFromThePage();
+    });
+  } else {
+    // service worker or sync not supported
+    postDataFromThePage();
+  }
+}
+
+function postDataFromThePage() {
+
+}
+```
+
+```js
+// in service worker sw.js:
+listenForBackOnlineSyncEvent();
+
+function listenForBackOnlineSyncEvent() {
+  self.addEventListener('sync', function(event) {
+    console.log('sync event detected');
+    if (event.tag == 'myFirstSync') {
+      console.log('sync event TAG detected');
+      event.waitUntil(doSomeStuff());
+    }
+  });
+}
+
+function doSomeStuff() {
+  return new Promise(function(resolve, reject) {
+    if (true) {
+      resolve('the promise worked');
+    } else {
+      reject(Error('something broke'));
+    }
+  });
+}
+```
