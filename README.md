@@ -41,9 +41,9 @@ Another example I've worked with has a list of files that is [partially automati
 
 <https://github.com/hchiam/code-inspiration/commit/8ffb3b0e597adc2fe0b2f4fba9bfdac96b173059>
 
-## You can use `sw-precache` to automatically generate a service worker (with some configurations)
+## Auto-generate a service worker
 
-<https://developers.google.com/web/fundamentals/architecture/app-shell>
+You can do that using `sw-precache` and some configuration: <https://developers.google.com/web/fundamentals/architecture/app-shell>
 
 ## Background Sync API
 
