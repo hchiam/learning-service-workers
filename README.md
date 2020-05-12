@@ -27,7 +27,7 @@ For more info, follow this tutorial: <https://web.dev/codelab-service-workers>
 
 (Based on what I learned from this template: <https://glitch.com/~serviceworker-offline> and more.)
 
-## Example that's actually used
+## Examples that are actually used
 
 The following service worker script makes 2 kinds of things available offline (an offline page, and various JS/CSS resources needed to make it interactive offline):
 
@@ -36,6 +36,10 @@ The following service worker script makes 2 kinds of things available offline (a
 And you can see the latest version of that same service worker file here: (it does more)
 
 <https://github.com/hchiam/hchiam.github.io/blob/master/service-worker.js>
+
+Another example I've worked with has a list of files that is [partially automatically generated](https://github.com/hchiam/code-inspiration/commit/b0df8d8af208d65b6282ea7362b35fc5205bb907):
+
+<https://github.com/hchiam/code-inspiration/commit/8ffb3b0e597adc2fe0b2f4fba9bfdac96b173059>
 
 ## You can use `sw-precache` to automatically generate a service worker (with some configurations)
 
