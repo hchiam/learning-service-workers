@@ -99,3 +99,9 @@ function doSomeStuff() {
   });
 }
 ```
+
+## More reading
+
+<https://developers.google.com/web/fundamentals/instant-and-offline/offline-ux#network_connection_improves_or_is_restored>
+
+<https://github.com/GoogleChromeLabs/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29>
