@@ -37,6 +37,10 @@ And you can see the latest version of that same service worker file here: (it do
 
 <https://github.com/hchiam/hchiam.github.io/blob/master/service-worker.js>
 
+## You can use `sw-precache` to automatically generate a service worker (with some configurations)
+
+<https://developers.google.com/web/fundamentals/architecture/app-shell>
+
 ## Background Sync API
 
 ```js
