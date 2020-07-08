@@ -41,6 +41,25 @@ Another example I've worked with has a list of files that is [partially automati
 
 <https://github.com/hchiam/code-inspiration/commit/8ffb3b0e597adc2fe0b2f4fba9bfdac96b173059>
 
+## Unregister service worker with a UI button
+
+Useful if the user can't/doesn't navigate away from the page (to clear cache and unregister service worker), or if they're using a PWA "installed" on their device. You can have a button `update-page-button` to manually update to the latest service worker and new cached files:
+
+```js
+function refreshSW() {
+  navigator.serviceWorker.getRegistrations().then(function (registrations) {
+    for (let registration of registrations) {
+      registration.unregister();
+    }
+  });
+}
+
+document.getElementById("update-page-button").addEventListener("click", function () {
+  refreshSW();
+  location.href = "/";
+});
+```
+
 ## Auto-generate a service worker
 
 You can do that using `sw-precache` and some configuration: <https://developers.google.com/web/fundamentals/architecture/app-shell>
