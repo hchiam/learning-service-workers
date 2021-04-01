@@ -54,10 +54,12 @@ function refreshSW() {
   });
 }
 
-document.getElementById("update-page-button").addEventListener("click", function () {
-  refreshSW();
-  location.href = "/";
-});
+document
+  .getElementById("update-page-button")
+  .addEventListener("click", function () {
+    refreshSW();
+    location.href = "/";
+  });
 ```
 
 ## Auto-generate a service worker
@@ -72,26 +74,26 @@ registerServiceWorker();
 requestAOneOffSync();
 
 function registerServiceWorker() {
-  navigator.serviceWorker.register('/sw.js');
+  navigator.serviceWorker.register("/sw.js");
 }
 
 function requestAOneOffSync() {
-  if ('serviceWorker' in navigator && 'SyncManager' in window) {
-    navigator.serviceWorker.ready.then(function(swRegistration) {
-      return swRegistration.sync.register('myFirstSync');
-    }).catch(function() {
-      // maybe OS-level restriction on registering a sync, so just do it
-      postDataFromThePage();
-    });
+  if ("serviceWorker" in navigator && "SyncManager" in window) {
+    navigator.serviceWorker.ready
+      .then(function (swRegistration) {
+        return swRegistration.sync.register("myFirstSync");
+      })
+      .catch(function () {
+        // maybe OS-level restriction on registering a sync, so just do it
+        postDataFromThePage();
+      });
   } else {
     // service worker or sync not supported
     postDataFromThePage();
   }
 }
 
-function postDataFromThePage() {
-
-}
+function postDataFromThePage() {}
 ```
 
 ```js
@@ -99,21 +101,21 @@ function postDataFromThePage() {
 listenForBackOnlineSyncEvent();
 
 function listenForBackOnlineSyncEvent() {
-  self.addEventListener('sync', function(event) {
-    console.log('sync event detected');
-    if (event.tag == 'myFirstSync') {
-      console.log('sync event TAG detected');
+  self.addEventListener("sync", function (event) {
+    console.log("sync event detected");
+    if (event.tag == "myFirstSync") {
+      console.log("sync event TAG detected");
       event.waitUntil(doSomeStuff());
     }
   });
 }
 
 function doSomeStuff() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     if (true) {
-      resolve('the promise worked');
+      resolve("the promise worked");
     } else {
-      reject(Error('something broke'));
+      reject(Error("something broke"));
     }
   });
 }
