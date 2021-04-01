@@ -2,6 +2,8 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
+Note: Web Workers can run expensive scripts without freezing the UI, while Service Workers can modify network requests: <https://stackoverflow.com/a/38634315>
+
 ## Setup
 
 ```bash
