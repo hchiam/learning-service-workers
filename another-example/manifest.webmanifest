@@ -4,7 +4,7 @@
   "description": "Second example",
   "icons": [
     {
-      "src": "interesting.png",
+      "src": "icon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
