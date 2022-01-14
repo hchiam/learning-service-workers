@@ -4,6 +4,8 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 Note: Web Workers can run expensive scripts without freezing the UI, while Service Workers can modify network requests: <https://stackoverflow.com/a/38634315>
 
+More recent tutorial to follow: <https://youtu.be/sOq92prx00w>
+
 ## Setup
 
 ```bash
@@ -128,3 +130,7 @@ function doSomeStuff() {
 <https://developers.google.com/web/fundamentals/instant-and-offline/offline-ux#network_connection_improves_or_is_restored>
 
 <https://github.com/GoogleChromeLabs/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29>
+
+## Workbox Typescript Tutorial
+
+<https://youtu.be/sOq92prx00w>
