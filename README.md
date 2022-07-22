@@ -127,6 +127,12 @@ function doSomeStuff() {
 
 ## More reading
 
+Workbox CLI wizard and more: https://web.dev/learn/pwa/workbox
+
+- `npx workbox-cli wizard`
+
+Updating service worker: https://web.dev/learn/pwa/update/#updating-the-service-worker
+
 <https://developers.google.com/web/fundamentals/instant-and-offline/offline-ux#network_connection_improves_or_is_restored>
 
 <https://github.com/GoogleChromeLabs/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29>
