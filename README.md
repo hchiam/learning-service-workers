@@ -45,6 +45,9 @@ Another example I've worked with has a list of files that is [partially automati
 
 <https://github.com/hchiam/code-inspiration/commit/8ffb3b0e597adc2fe0b2f4fba9bfdac96b173059>
 
+Yet another working example that automatically updates the site's service worker when users simply refresh the page (no need to fully close the tab and re-open): 
+<https://github.com/hchiam/notepad/tree/914dda03ad458151e469773adb59db8a059f067a/site_files>
+
 ## Unregister service worker with a UI button
 
 Useful if the user can't/doesn't navigate away from the page (to clear cache and unregister service worker), or if they're using a PWA "installed" on their device. You can have a button `update-page-button` to manually update to the latest service worker and new cached files:
