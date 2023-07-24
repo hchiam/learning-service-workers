@@ -132,7 +132,7 @@ function doSomeStuff() {
 
 You can save and delete resources in the same js file as your app, and trigger on click events: https://glitch.com/~learn-pwa-asset-caching
 
-Caching strategies: ("Cache First" or "Stale While Revalidate" seem like my favourite = cache then network, or cache and background fetch network into cache) https://web.dev/learn/pwa/serving/#caching-strategies
+Caching strategies: (["Stale While Revalidate"](https://web.dev/learn/pwa/serving/#stale-while-revalidate) = cache and background fetch network into cache for next time - seem like my favourite, then ["Cache first"](https://web.dev/learn/pwa/serving/#cache-first), then ["Network first"](https://web.dev/learn/pwa/serving/#network-first)) https://web.dev/learn/pwa/serving/#caching-strategies
 
 Workbox CLI wizard and more: https://web.dev/learn/pwa/workbox
 
