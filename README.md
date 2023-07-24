@@ -133,6 +133,27 @@ function doSomeStuff() {
 You can save and delete resources in the same js file as your app, and trigger on click events: https://glitch.com/~learn-pwa-asset-caching
 
 Caching strategies: (["Stale While Revalidate"](https://web.dev/learn/pwa/serving/#stale-while-revalidate) = cache and background fetch network into cache for next time - seem like my favourite, then ["Cache first"](https://web.dev/learn/pwa/serving/#cache-first), then ["Network first"](https://web.dev/learn/pwa/serving/#network-first)) https://web.dev/learn/pwa/serving/#caching-strategies
+  
+  ```js
+  self.addEventListener('fetch', event => {
+    event.respondWith(
+      caches.match(event.request).then(cachedResponse => {
+        const networkFetch = fetch(event.request).then(response => {
+          // update the cache with a clone of the network response
+          const responseClone = response.clone();
+          caches.open(url.searchParams.get('name')).then(cache => {
+            cache.put(event.request, responseClone);
+          });
+          return response;
+        }).catch(function (reason) {
+          console.error('ServiceWorker fetch failed: ', reason);
+        });
+        // prioritize cached response over network
+        return cachedResponse || networkFetch;
+      });
+    );
+  });
+  ```
 
 Workbox CLI wizard and more: https://web.dev/learn/pwa/workbox
 
