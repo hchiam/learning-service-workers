@@ -130,6 +130,8 @@ function doSomeStuff() {
 
 ## More reading
 
+You can save and delete resources in the same js file as your app, and trigger on click events: https://glitch.com/~learn-pwa-asset-caching
+
 Workbox CLI wizard and more: https://web.dev/learn/pwa/workbox
 
 - `npx workbox-cli wizard`
