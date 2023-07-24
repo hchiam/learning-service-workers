@@ -158,6 +158,9 @@ Caching strategies: (["Stale While Revalidate"](https://web.dev/learn/pwa/servin
 Workbox CLI wizard and more: https://web.dev/learn/pwa/workbox
 
 - `npx workbox-cli wizard`
+- more info to consider: https://web.dev/learn/pwa/workbox
+- codelab (mentions how to use workbox to add offline fallback in 1 LOC): https://developers.google.com/codelabs/pwa-training/pwa03--working-with-workbox#3
+- example recipe to manually include: https://developer.chrome.com/docs/workbox/modules/workbox-recipes/#pattern-3
 
 Updating service worker: https://web.dev/learn/pwa/update/#updating-the-service-worker
 
