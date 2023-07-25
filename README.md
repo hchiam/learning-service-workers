@@ -152,7 +152,7 @@ Caching strategies: (["Stale While Revalidate"](https://web.dev/learn/pwa/servin
         });
         // prioritize cached response over network
         return cachedResponse || networkFetch;
-      });
+      })
     );
   });
   ```
