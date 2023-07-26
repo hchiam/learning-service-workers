@@ -1,12 +1,13 @@
 # Learning about service workers
 
-Just one of the things I'm learning. <https://github.com/hchiam/learning>
+Just one of the things I'm learning. https://github.com/hchiam/learning
 
-My favourite notes so far: jump to https://github.com/hchiam/learning-service-workers/blob/main/README.md#pwa-service-worker-with-workbox-codelab
+My favourite notes so far: jump to [PWA service worker with workbox codelab (`npm i` and `import`)
+](https://github.com/hchiam/learning-service-workers/blob/main/README.md#pwa-service-worker-with-workbox-codelab-npm-i-and-import)
 
-Note: Web Workers can run expensive scripts without freezing the UI, while Service Workers can modify network requests: <https://stackoverflow.com/a/38634315>
+Note: Web Workers can run expensive scripts without freezing the UI, while Service Workers can modify network requests: https://stackoverflow.com/a/38634315
 
-More recent tutorial to follow: <https://youtu.be/sOq92prx00w>
+More recent tutorial to follow: https://youtu.be/sOq92prx00w
 
 Or just: `npx workbox-cli wizard` to get started, but personally I find installing a few workbox plugins to be more flexible/easier to apply to varied projects.
 
@@ -17,9 +18,9 @@ npm install
 npm run start
 ```
 
-Then open <http://localhost:8000> in Chrome and open Chrome DevTools: Application -> Service Workers.
+Then open http://localhost:8000 in Chrome and open Chrome DevTools: Application -> Service Workers.
 
-For more info, follow this tutorial: <https://web.dev/codelab-service-workers>
+For more info, follow this tutorial: https://web.dev/codelab-service-workers
 
 ## Looking at the code in this repo?
 
@@ -31,26 +32,26 @@ For more info, follow this tutorial: <https://web.dev/codelab-service-workers>
 
 ## Example template code that actually does something
 
-3-steps: <https://github.com/hchiam/learning-service-workers/tree/master/another-example>
+3-steps: https://github.com/hchiam/learning-service-workers/tree/master/another-example
 
-(Based on what I learned from this template: <https://glitch.com/~serviceworker-offline> and more.)
+(Based on what I learned from this template: https://glitch.com/~serviceworker-offline and more.)
 
 ## Examples that are actually used
 
 The following service worker script makes 2 kinds of things available offline (an offline page, and various JS/CSS resources needed to make it interactive offline):
 
-<https://github.com/hchiam/hchiam.github.io/blob/1c18a08e69a905c0ede2d650e1bea2cdd4a56d8b/service-worker.js>
+https://github.com/hchiam/hchiam.github.io/blob/1c18a08e69a905c0ede2d650e1bea2cdd4a56d8b/service-worker.js
 
 And you can see the latest version of that same service worker file here: (it does more)
 
-<https://github.com/hchiam/hchiam.github.io/blob/master/service-worker.js>
+https://github.com/hchiam/hchiam.github.io/blob/master/service-worker.js
 
 Another example I've worked with has a list of files that is [partially automatically generated](https://github.com/hchiam/code-inspiration/commit/b0df8d8af208d65b6282ea7362b35fc5205bb907):
 
-<https://github.com/hchiam/code-inspiration/commit/8ffb3b0e597adc2fe0b2f4fba9bfdac96b173059>
+https://github.com/hchiam/code-inspiration/commit/8ffb3b0e597adc2fe0b2f4fba9bfdac96b173059
 
 Yet another working example that automatically updates the site's service worker when users simply refresh the page (no need to fully close the tab and re-open): 
-<https://github.com/hchiam/notepad/tree/914dda03ad458151e469773adb59db8a059f067a/site_files>
+https://github.com/hchiam/notepad/tree/914dda03ad458151e469773adb59db8a059f067a/site_files
 
 ## Unregister service worker with a UI button
 
@@ -75,7 +76,7 @@ document
 
 ## Auto-generate a service worker
 
-You can do that using `sw-precache` and some configuration: <https://developers.google.com/web/fundamentals/architecture/app-shell>
+You can do that using `sw-precache` and some configuration: https://developers.google.com/web/fundamentals/architecture/app-shell
 
 ## Background Sync API
 
@@ -174,9 +175,9 @@ https://web.dev/learn/pwa/workbox
 
 Updating service worker: https://web.dev/learn/pwa/update/#updating-the-service-worker
 
-<https://developers.google.com/web/fundamentals/instant-and-offline/offline-ux#network_connection_improves_or_is_restored>
+https://developers.google.com/web/fundamentals/instant-and-offline/offline-ux#network_connection_improves_or_is_restored
 
-<https://github.com/GoogleChromeLabs/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29>
+https://github.com/GoogleChromeLabs/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29
 
 ### Basic PWA service worker codelab
 
@@ -184,13 +185,13 @@ https://developers.google.com/codelabs/pwa-training/pwa03--going-offline#0
 
 - with no special library/plugin imports
 
-### PWA service worker with workbox codelab
+### PWA service worker with workbox codelab (`npm i` and `import`)
 
 https://developers.google.com/codelabs/pwa-training/pwa03--working-with-workbox#0
 
 - I think I personally like this strategy best so far
 - more powerful library/plugin imports with less code
 - set up service worker in a js script: https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/js/main.js#L17-L41
-- install a few workbox plugins (6 that I find essential): https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/package.json#L29C5-L29C5
+- install a few workbox plugins (`npm i` the 6 that I find essential): https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/package.json#L29C5-L29C5
 - the actual service worker code itself (cache html, stale while revalidate style/script/worker, and offline fallback offline.html): https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/service-worker.js
 - the offline.html file itself, with inline style: https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/offline.html
