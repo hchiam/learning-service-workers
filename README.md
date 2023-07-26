@@ -158,8 +158,14 @@ Caching strategies: (["Stale While Revalidate"](https://web.dev/learn/pwa/servin
   ```
 
 https://developers.google.com/codelabs/pwa-training/pwa03--going-offline#0
+- with no special library/plugin imports
 
 https://developers.google.com/codelabs/pwa-training/pwa03--working-with-workbox#0
+- more powerful library/plugin imports with less code
+- set up service worker in a js script: https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/js/main.js#L17-L41
+- install a few workbox plugins (6 that I find essential): https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/package.json#L29C5-L29C5
+- the actual service worker code itself (cache html, stale while revalidate style/script/worker, and offline fallback offline.html): https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/service-worker.js
+- the offline.html file itself, with inline style: https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/offline.html
 
 Workbox CLI wizard and more: https://web.dev/learn/pwa/workbox
 
