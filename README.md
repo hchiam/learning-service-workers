@@ -3,7 +3,7 @@
 Just one of the things I'm learning. https://github.com/hchiam/learning
 
 My favourite notes so far: jump to [PWA service worker with workbox codelab (`npm i` and `import`)
-](https://github.com/hchiam/learning-service-workers/blob/main/README.md#pwa-service-worker-with-workbox-codelab-npm-i-and-import)
+](https://github.com/hchiam/learning-service-workers/tree/main#pwa-service-worker-with-workbox-codelab-npm-i-and-import)
 
 Note: Web Workers can run expensive scripts without freezing the UI, while Service Workers can modify network requests: https://stackoverflow.com/a/38634315
 
