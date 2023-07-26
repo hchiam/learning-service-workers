@@ -6,7 +6,7 @@ Note: Web Workers can run expensive scripts without freezing the UI, while Servi
 
 More recent tutorial to follow: <https://youtu.be/sOq92prx00w>
 
-Or just: `npx workbox-cli wizard` to get started.
+Or just: `npx workbox-cli wizard` to get started, but personally I find installing a few workbox plugins to be more flexible/easier to apply to varied projects.
 
 ## Setup
 
