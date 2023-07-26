@@ -2,6 +2,8 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
+My favourite notes so far: jump to https://github.com/hchiam/learning-service-workers/blob/main/README.md#pwa-service-worker-with-workbox-codelab
+
 Note: Web Workers can run expensive scripts without freezing the UI, while Service Workers can modify network requests: <https://stackoverflow.com/a/38634315>
 
 More recent tutorial to follow: <https://youtu.be/sOq92prx00w>
