@@ -191,7 +191,7 @@ https://developers.google.com/codelabs/pwa-training/pwa03--working-with-workbox#
 
 - I think I personally like this strategy best so far
 - more powerful library/plugin imports with less code
-1. make service worker run with a js script: https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/js/main.js#L17-L41
-2. install a few workbox plugins (`npm i` the 6 that I find essential): https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/package.json#L29C5-L29C5
+1. install a few workbox plugins (`npm i` the 6 that I find essential): https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/package.json#L29C5-L29C5
+2. make service worker run with a js script: https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/js/main.js#L17-L41
 3. **the actual service worker code itself** (cache html, stale while revalidate style/script/worker, and offline fallback offline.html): https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/service-worker.js
 4. the offline.html file itself, with inline style: https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/offline.html
