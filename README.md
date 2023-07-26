@@ -157,6 +157,10 @@ Caching strategies: (["Stale While Revalidate"](https://web.dev/learn/pwa/servin
   });
   ```
 
+https://developers.google.com/codelabs/pwa-training/pwa03--going-offline#0
+
+https://developers.google.com/codelabs/pwa-training/pwa03--working-with-workbox#0
+
 Workbox CLI wizard and more: https://web.dev/learn/pwa/workbox
 
 - `npx workbox-cli wizard`
