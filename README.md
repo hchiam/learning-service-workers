@@ -185,6 +185,22 @@ https://developers.google.com/codelabs/pwa-training/pwa03--going-offline#0
 
 - with no special library/plugin imports
 
+## Just need an offline fallback?
+
+https://developer.chrome.com/docs/workbox/managing-fallback-responses/#offline-page-only
+
+The following code automatically searches for offline.html at the root folder:
+
+```js
+import {offlineFallback} from 'workbox-recipes';
+import {setDefaultHandler} from 'workbox-routing';
+import {NetworkOnly} from 'workbox-strategies';
+
+setDefaultHandler(new NetworkOnly());
+
+offlineFallback();
+```
+
 ### PWA service worker with workbox codelab (`npm i` and `import`)
 
 https://developers.google.com/codelabs/pwa-training/pwa03--working-with-workbox#0
