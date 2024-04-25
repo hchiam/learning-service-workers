@@ -11,6 +11,10 @@ More recent tutorial to follow: https://youtu.be/sOq92prx00w
 
 Or just: `npx workbox-cli wizard` to get started, but personally I find installing a few workbox plugins to be more flexible/easier to apply to varied projects.
 
+## Code examples I know work
+
+https://github.com/hchiam/learning-service-workers/tree/main/example-service-worker
+
 ## Quick code to copy-paste (offline but not installable)
 
 index.html:
@@ -43,7 +47,8 @@ var CACHE_NAME = "some_cache_name";
 
 var offlinePage = "/index.html";
 
-var URLS = [ // yes, the slash "/" matters here in service-worker.js:
+var URLS = [
+  // yes, the slash "/" matters here in service-worker.js:
   offlinePage,
   "/css-boilerplate.css",
   "/other-script.js",
@@ -113,7 +118,9 @@ function interceptResourceFetchWithServiceWorker(event) {
 }
 ```
 
-## Setup
+## Older notes
+
+### Setup
 
 ```bash
 npm install
@@ -124,7 +131,7 @@ Then open http://localhost:8000 in Chrome and open Chrome DevTools: Application 
 
 For more info, follow this tutorial: https://web.dev/codelab-service-workers
 
-## Looking at the code in this repo?
+### Looking at the code in this repo?
 
 (The most important stuff is inside the `public` folder.)
 
@@ -132,13 +139,13 @@ For more info, follow this tutorial: https://web.dev/codelab-service-workers
 2. [`register-sw.js`](https://github.com/hchiam/learning-service-workers/blob/master/public/register-sw.js) registers the service worker `service-worker.js`, and
 3. [`service-worker.js`](https://github.com/hchiam/learning-service-workers/blob/master/public/service-worker.js) is the actual service worker, and listens/reacts to specific events.
 
-## Example template code that actually does something
+### Example template code that actually does something
 
 3-steps: https://github.com/hchiam/learning-service-workers/tree/master/another-example
 
 (Based on what I learned from this template: https://glitch.com/~serviceworker-offline and more.)
 
-## Examples that are actually used
+### Examples that are actually used
 
 The following service worker script makes 2 kinds of things available offline (an offline page, and various JS/CSS resources needed to make it interactive offline):
 
@@ -152,10 +159,10 @@ Another example I've worked with has a list of files that is [partially automati
 
 https://github.com/hchiam/code-inspiration/commit/8ffb3b0e597adc2fe0b2f4fba9bfdac96b173059
 
-Yet another working example that automatically updates the site's service worker when users simply refresh the page (no need to fully close the tab and re-open): 
+Yet another working example that automatically updates the site's service worker when users simply refresh the page (no need to fully close the tab and re-open):
 https://github.com/hchiam/notepad/tree/914dda03ad458151e469773adb59db8a059f067a/site_files
 
-## Unregister service worker with a UI button
+### Unregister service worker with a UI button
 
 Useful if the user can't/doesn't navigate away from the page (to clear cache and unregister service worker), or if they're using a PWA "installed" on their device. You can have a button `update-page-button` to manually update to the latest service worker and new cached files:
 
@@ -176,11 +183,11 @@ document
   });
 ```
 
-## Auto-generate a service worker
+### Auto-generate a service worker
 
 You can do that using `sw-precache` and some configuration: https://developers.google.com/web/fundamentals/architecture/app-shell
 
-## Background Sync API
+### Background Sync API
 
 ```js
 // in client:
@@ -235,38 +242,40 @@ function doSomeStuff() {
 }
 ```
 
-## More reading
+### More reading
 
 You can save and delete resources in the same js file as your app, and trigger on click events: https://glitch.com/~learn-pwa-asset-caching
 
 Caching strategies: (["Stale While Revalidate"](https://web.dev/learn/pwa/serving/#stale-while-revalidate) = cache and background fetch network into cache for next time - seem like my favourite, then ["Cache first"](https://web.dev/learn/pwa/serving/#cache-first), then ["Network first"](https://web.dev/learn/pwa/serving/#network-first)) https://web.dev/learn/pwa/serving/#caching-strategies
-  
-  ```js
-  self.addEventListener('fetch', event => {
-    event.respondWith(
-      caches.match(event.request).then(cachedResponse => {
-        const networkFetch = fetch(event.request).then(response => {
-          // update the cache with a clone of the network response
-          const responseClone = response.clone();
-          caches.open(url.searchParams.get('name')).then(cache => {
-            cache.put(event.request, responseClone);
-          });
-          return response;
-        }).catch(function (reason) {
-          console.error('ServiceWorker fetch failed: ', reason);
-        });
-        // prioritize cached response over network
-        return cachedResponse || networkFetch;
-      })
-    );
-  });
-  ```
+
+    ```js
+    self.addEventListener("fetch", (event) => {
+      event.respondWith(
+        caches.match(event.request).then((cachedResponse) => {
+          const networkFetch = fetch(event.request)
+            .then((response) => {
+              // update the cache with a clone of the network response
+              const responseClone = response.clone();
+              caches.open(url.searchParams.get("name")).then((cache) => {
+                cache.put(event.request, responseClone);
+              });
+              return response;
+            })
+            .catch(function (reason) {
+              console.error("ServiceWorker fetch failed: ", reason);
+            });
+          // prioritize cached response over network
+          return cachedResponse || networkFetch;
+        })
+      );
+    });
+    ```
 
 A basic Workbox Typescript tutorial: https://youtu.be/sOq92prx00w
 
-## [Workbox/PWA training](https://web.dev/new-pwa-training/)
+### [Workbox/PWA training](https://web.dev/new-pwa-training/)
 
-### Workbox CLI wizard and more
+#### Workbox CLI wizard and more
 
 https://web.dev/learn/pwa/workbox
 
@@ -281,42 +290,47 @@ https://developers.google.com/web/fundamentals/instant-and-offline/offline-ux#ne
 
 https://github.com/GoogleChromeLabs/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29
 
-### Basic PWA service worker codelab
+#### Basic PWA service worker codelab
 
 https://developers.google.com/codelabs/pwa-training/pwa03--going-offline#0
 
 - with no special library/plugin imports
 
-## Just need an offline fallback?
+### Just need an offline fallback?
 
 https://developer.chrome.com/docs/workbox/managing-fallback-responses/#offline-page-only
 
 The following code automatically searches for offline.html at the root folder and caches that:
 
 ```js
-import {offlineFallback} from 'workbox-recipes';
-import {setDefaultHandler} from 'workbox-routing';
-import {NetworkOnly} from 'workbox-strategies';
+import { offlineFallback } from "workbox-recipes";
+import { setDefaultHandler } from "workbox-routing";
+import { NetworkOnly } from "workbox-strategies";
 
 setDefaultHandler(new NetworkOnly());
 
 offlineFallback();
 ```
 
-### PWA service worker with workbox codelab (`npm i` and `import`)
+#### PWA service worker with workbox codelab (`npm i` and `import`)
 
 https://developers.google.com/codelabs/pwa-training/pwa03--working-with-workbox#0
 
 - I think I personally like this strategy best so far
 - more powerful library/plugin imports with less code
+
 1. install a few workbox plugins (`npm install` the 5 below that I find essential): https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/package.json#L29C5-L29C5 or:
-  ```sh
-  npm i -SE workbox-recipes workbox-strategies workbox-routing workbox-cacheable-response workbox-expiration
-  ```
-  or:
-  ```sh
-  yarn add -E workbox-recipes workbox-strategies workbox-routing workbox-cacheable-response workbox-expiration
-  ```
+
+   ```sh
+   npm i -SE workbox-recipes workbox-strategies workbox-routing workbox-cacheable-response workbox-expiration
+   ```
+
+   or:
+
+   ```sh
+   yarn add -E workbox-recipes workbox-strategies workbox-routing workbox-cacheable-response workbox-expiration
+   ```
+
 2. make service worker run with a js script: https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/js/main.js#L17-L41
 3. **the actual service worker code itself** (cache html, stale while revalidate style/script/worker, and offline fallback offline.html): https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/service-worker.js
 4. the offline.html file itself, with inline style: https://github.com/hchiam/pwa-workshop-codelab/blob/pwa03--workbox/offline.html

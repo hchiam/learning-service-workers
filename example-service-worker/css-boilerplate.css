@@ -1,0 +1,177 @@
+:root {
+  --accent-colour: lime;
+  accent-color: var(--accent-colour);
+  --p: 0;
+  --m: 0;
+
+  --pb: 0;
+  --pbs: 0;
+  --pbe: 0;
+  --pi: 0;
+  --pis: 0;
+  --pie: 0;
+
+  --mb: 0;
+  --mbs: 0;
+  --mbe: 0;
+  --mi: 0;
+  --mis: 0;
+  --mie: 0;
+}
+
+* {
+  background: rgb(32, 32, 32);
+  color: whitesmoke;
+  font-family: avenir, calibri, arial, helvetica, sans-serif;
+  border-radius: 0.5rem;
+  transition: 0.25s;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding: 2% 5%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+button {
+  padding: 0.5rem;
+  border: none;
+  background: rgb(50, 50, 50);
+  box-shadow: 2px 2px 5px black;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+}
+
+button:not(:disabled):hover,
+input:not(:disabled):hover,
+textarea:not(:disabled):hover,
+button:not(:disabled):focus,
+input:not(:disabled):focus,
+textarea:not(:disabled):focus {
+  background: var(--accent-colour);
+  color: black;
+}
+
+a:not(:disabled):hover,
+a:not(:disabled):focus {
+  color: var(--accent-colour);
+}
+
+button:not(:disabled):focus,
+a:not(:disabled):focus {
+  text-decoration: underline;
+}
+
+a[target="_blank"]::after {
+  /* still use aria-description="(opens in new window)" to support all browsers*/
+  content: " ↗️" / "";
+  content: " (opens in new window) "
+    url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" fill="white" style="background-color:white;"><path d="M4.5,1.0 L2.0,1.0 A1.0,1.0 0 0,0 1.0,2.0 L1.0,2.0 L1.0,8.0 A1.0,1.0 0,0,0 2.0,9.0 L8.0,9.0 A1.0,1.0 0,0,0 9.0,8.0 L9.0,5.5 M9.0,4.5 L9.0,1.0 L5.5,1.0 M9.0,1.0 L5.0,5.0" stroke-linejoin="round" stroke="black" fill="none" stroke-width="1.0"></path></svg>');
+  content: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" fill="white" style="background-color:white;"><path d="M4.5,1.0 L2.0,1.0 A1.0,1.0 0 0,0 1.0,2.0 L1.0,2.0 L1.0,8.0 A1.0,1.0 0,0,0 2.0,9.0 L8.0,9.0 A1.0,1.0 0,0,0 9.0,8.0 L9.0,5.5 M9.0,4.5 L9.0,1.0 L5.5,1.0 M9.0,1.0 L5.0,5.0" stroke-linejoin="round" stroke="black" fill="none" stroke-width="1.0"></path></svg>') /
+    " (opens in new window) ";
+  padding-left: 2px;
+  padding-right: 2px;
+  position: relative;
+  top: -3px;
+  /* only show the message to screen readers: */
+  font-size: 0px;
+}
+
+code,
+kbd {
+  font-family: monospace;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+[style*="--p:"] {
+  padding: calc(1rem * var(--p)) !important;
+}
+
+[style*="--m:"] {
+  margin: calc(1rem * var(--m)) !important;
+}
+
+[style*="--pb:"] {
+  padding-block: calc(1rem * var(--pb)) !important;
+}
+[style*="--pbs:"] {
+  padding-block-start: calc(1rem * var(--pbs)) !important;
+}
+[style*="--pbe:"] {
+  padding-block-end: calc(1rem * var(--pbe)) !important;
+}
+
+[style*="--pi:"] {
+  padding-inline: calc(1rem * var(--pi)) !important;
+}
+[style*="--pis:"] {
+  padding-inline-start: calc(1rem * var(--pis)) !important;
+}
+[style*="--pie:"] {
+  padding-inline-end: calc(1rem * var(--pie)) !important;
+}
+
+[style*="--mb:"] {
+  margin-block: calc(1rem * var(--mb)) !important;
+}
+[style*="--mbs:"] {
+  margin-block-start: calc(1rem * var(--mbs)) !important;
+}
+[style*="--mbe:"] {
+  margin-block-end: calc(1rem * var(--mbe)) !important;
+}
+
+[style*="--mi:"] {
+  margin-inline: calc(1rem * var(--mi)) !important;
+}
+[style*="--mis:"] {
+  margin-inline-start: calc(1rem * var(--mis)) !important;
+}
+[style*="--mie:"] {
+  margin-inline-end: calc(1rem * var(--mie)) !important;
+}

@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "d": "yarn deploy",
+    "surge": "yarn deploy",
+    "deploy": "surge . https://example-service-worker.surge.sh"
+  }
+}
