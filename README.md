@@ -19,7 +19,9 @@ Or just: `npx workbox-cli wizard` to get started, but personally I find installi
 
 How to check for installability:
 
-![Chrome > Application > Manifest > Installability](https://github.com/hchiam/learning-service-workers/tree/main/how_to_check_installability.png)
+![Chrome > Application > Manifest > Installability](https://github.com/hchiam/learning-service-workers/blob/main/how_to_check_installability.png)
+
+To uninstall a PWA in chrome, go to chrome://apps and open the PWA, then the 3 vertical dots "...", then "Uninstall (name of PWA)".
 
 ## Quick code to copy-paste (offline but not installable)
 
