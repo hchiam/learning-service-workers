@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>installable example</title>
+    <link rel="stylesheet" href="css-boilerplate.css" />
+    <script src="other-script.js"></script>
+    <script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register("service-worker.js");
+      }
+    </script>
+    <!-- this and icon.png and /manifest.webmanifest in service-worker.js are the main differences with the other example: -->
+    <link rel="manifest" href="manifest.webmanifest" />
+  </head>
+  <body>
+    <p>other stuff</p>
+  </body>
+</html>

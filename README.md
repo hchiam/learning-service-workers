@@ -13,7 +13,13 @@ Or just: `npx workbox-cli wizard` to get started, but personally I find installi
 
 ## Code examples I know work
 
-https://github.com/hchiam/learning-service-workers/tree/main/example-service-worker
+[/example-service-worker](https://github.com/hchiam/learning-service-workers/tree/main/example-service-worker) folder = https://example-service-worker.surge.sh
+
+[/example-service-worker-installable](https://github.com/hchiam/learning-service-workers/tree/main/example-service-worker-installable) folder = https://example-service-worker-installable.surge.sh
+
+How to check for installability:
+
+![Chrome > Application > Manifest > Installability](https://github.com/hchiam/learning-service-workers/tree/main/how_to_check_installability.png)
 
 ## Quick code to copy-paste (offline but not installable)
 
