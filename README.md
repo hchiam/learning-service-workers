@@ -21,7 +21,9 @@ How to check for installability:
 
 ![Chrome > Application > Manifest > Installability](https://github.com/hchiam/learning-service-workers/blob/main/how_to_check_installability.png)
 
-To uninstall a PWA in chrome, go to chrome://apps and open the PWA, then the 3 vertical dots "...", then "Uninstall (name of PWA)".
+To uninstall a PWA in Chrome, go to chrome://apps and open the PWA, then the 3 vertical dots "...", then "Uninstall (name of PWA)".
+
+To update a PWA in Chrome on Android mobile, deploy an updated version of the service-worker.js, and refresh the site page on the device.
 
 ## Quick code to copy-paste (offline but not installable)
 
