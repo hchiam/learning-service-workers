@@ -1,4 +1,4 @@
-var CACHE_NAME = "some_cache_name";
+var CACHE_NAME = "some_cache_name"; // edit this file to trigger PWA update when the site is refreshed in Chrome
 
 var offlinePage = "/index.html";
 
