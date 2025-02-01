@@ -2,6 +2,8 @@
 
 Just one of the things I'm learning. https://github.com/hchiam/learning
 
+My GitHub template repo: https://github.com/hchiam/pwa-template
+
 My favourite notes so far: jump to [PWA service worker with workbox codelab (`npm i` and `import`)
 ](https://github.com/hchiam/learning-service-workers/tree/main#pwa-service-worker-with-workbox-codelab-npm-i-and-import)
 
